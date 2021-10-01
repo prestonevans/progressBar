@@ -1,0 +1,76 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  position: relative;
+  margin-bottom: 2em;
+}
+
+.cir {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: cadetblue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.steps::before {
+  content: "";
+  height: 0.5rem;
+  width: 100%;
+  background-color: lightgray;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -2;
+}
+
+.progress {
+  height: 0.5rem;
+  width: 0%;
+  background-color: cadetblue;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+  transition: width 0.5s ease-in;
+}
+
+button {
+  color: white;
+  background-color: cadetblue;
+  padding: 0.5em 1em;
+  font-size: 1.125rem;
+  border-radius: 0.75em;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: lightgray;
+  cursor: not-allowed;
+}
+
+.btnwrp {
+  display: flex;
+  gap: 2rem;
+}
+
+/*# sourceMappingURL=style.css.map */
